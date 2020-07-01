@@ -1,0 +1,20 @@
+<div class="scoreboard">
+    <div class="teamStats" id="radiant">
+        <h4>Radiant</h4>
+        <p>Score: {{matchdata.radiant.score}}</p>
+        <p>Average GPM: {{matchdata.radiant.gpm}}</p>
+        <p>Average XPM: {{matchdata.radiant.xpm}}</p>
+    </div>
+    <div class="matchStats">
+        <h1 [ngStyle]="{'color' : matchdata.radiantVictory ? '#00FF00' : '#FF0000'}">
+            {{whoWon()}}
+        </h1>
+        <h3>{{matchdata.length}}</h3>
+    </div>
+    <div class="teamStats" id="dire">
+        <h4>Dire</h4>
+        <p>Score: {{matchdata.dire.score}}</p>
+        <p>Average GPM: {{matchdata.dire.gpm}}</p>
+        <p>Average XPM: {{matchdata.dire.xpm}}</p>
+    </div>
+</div>

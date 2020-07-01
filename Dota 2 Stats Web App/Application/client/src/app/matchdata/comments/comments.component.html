@@ -1,0 +1,21 @@
+<div class="commentSection">
+    <h2>Comments</h2>
+    <div class="commentBox">
+        <h3>Post a comment</h3>
+        <p>Username: <input type="text" id="commentUser"  [(ngModel)]="commentUserName"></p>
+        <textarea id="commentBody" cols="100" rows="10" [(ngModel)]="commentBody"></textarea>
+        <button (click)="postComment()">Submit</button>
+        <p *ngIf="error">Username or comment body missing</p>
+    </div>
+    <div class="comment" [hidden]="shouldShowComments()">
+        <h4>No comments</h4>
+    </div>
+        <div class="comment" [hidden]="!shouldShowComments()" *ngFor="let comment of comments">
+            <h4>User: {{comment.name}}</h4>
+            <p>{{comment.body}}</p>
+            <h6>Date posted: {{formattedDate(comment.timePosted)}}</h6>
+        </div>
+</div>
+
+
+
