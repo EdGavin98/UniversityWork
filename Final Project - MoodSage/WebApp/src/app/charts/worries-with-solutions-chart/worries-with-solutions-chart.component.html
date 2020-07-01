@@ -1,0 +1,18 @@
+<div>
+    <mat-card class="chart">
+        <mat-card-title>Worries with Solutions</mat-card-title>
+        <mat-card-content>
+            <canvas baseChart [data]="data" [labels]="labels" [chartType]="chartType"></canvas>
+        </mat-card-content>
+        <mat-card-actions>
+            <mat-slide-toggle [(ngModel)]="thisMonthOnly" (change)="onChanged()">Last Month</mat-slide-toggle>
+            <mat-select [(value)]="selected" class="select" (selectionChange)="onChanged()">
+                <mat-option value="All">All</mat-option>
+                <mat-option value="Current">Current Only</mat-option>
+                <mat-option value="Hypothetical">Hypothetical Only</mat-option>
+            </mat-select>
+        </mat-card-actions>
+    </mat-card>
+</div>
+  
+  

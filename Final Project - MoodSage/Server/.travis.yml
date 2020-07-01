@@ -1,0 +1,12 @@
+language: node_js;
+node_js:
+  - "12.13.1"
+
+install: 
+  - npm install
+cache:
+  directories:
+    - node_modules
+
+env: 
+  - NODE_ENV=test

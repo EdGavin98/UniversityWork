@@ -1,0 +1,10 @@
+<div class="detailsSpace">
+    <h2>{{getDate()}}</h2>
+    <div class="space">
+        <h3 class="type">Type: {{worry.type}}</h3>
+        <h3 class="severity">Severity: {{worry.severity}}</h3>
+    </div>
+    <p id="description">{{worry.description}}</p>
+    <h3 class="numSolutions">{{worry.solutions.length}} {{worry.solutions.length == 1 ? "solution" : "solutions"}} logged</h3>
+    <p id="viewSolutions" *ngIf="worry.solutions.length > 0" >View {{worry.solutions.length == 1 ? "it" : "them"}} on the details page</p>
+</div>

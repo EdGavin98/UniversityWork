@@ -1,0 +1,29 @@
+table {
+  width: 100%;
+  margin-top: 3%;
+}
+
+tr.worry-detail-row {
+  height: 0;
+}
+
+tr.worry-row:not(.worry-expanded-row):hover {
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+tr.worry-row:not(.worry-expanded-row):active {
+  background: #efefef;
+}
+
+.worry-row td {
+  border-bottom-width: 0;
+}
+
+.worry-description {
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}

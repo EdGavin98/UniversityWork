@@ -1,0 +1,14 @@
+.detailsSpace {
+    padding: 3% 5%;
+    width: 500px;
+    max-width: 100%;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}

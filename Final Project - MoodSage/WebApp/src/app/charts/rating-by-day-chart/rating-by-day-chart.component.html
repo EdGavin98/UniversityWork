@@ -1,0 +1,12 @@
+
+<div>
+  <mat-card>
+    <mat-card-title>Average Mood Rating and Worry Severity By Day</mat-card-title>
+    <mat-card-content>
+      <canvas baseChart [chartType]="chartType" [labels]="labels" [datasets]="data" [options]="options"></canvas>
+    </mat-card-content>
+    <mat-card-actions>
+      <mat-slide-toggle [(ngModel)]="thisMonthOnly" (change)="onToggleChanged()">Last Month</mat-slide-toggle>
+    </mat-card-actions>
+  </mat-card>
+</div>

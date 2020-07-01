@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:key="notification_category"
+        app:title="Notifications"
+        app:defaultValue="true">
+
+        <SwitchPreferenceCompat
+            app:key="notifications"
+            app:title="Enable Reminder Notifications" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="customisation_category"
+        app:title="Customisation">
+
+        <ListPreference
+            app:key="chart_colour_primary"
+            app:title="Primary chart colour"
+            app:summary="Primary colour for the dashboard charts"
+            app:entries="@array/colour_array"
+            app:entryValues="@array/colour_value_array"
+            app:defaultValue="#FF6A1B9A"/>
+
+        <ListPreference
+            app:key="chart_colour_secondary"
+            app:title="Secondary chart colour"
+            app:summary="Secondary colour for the dashboard charts"
+            app:entries="@array/colour_array"
+            app:entryValues="@array/colour_value_array"
+            app:defaultValue="#FFAD1457"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="other_category"
+        app:title="Other">
+
+        <Preference
+            app:key="profile"
+            app:title="My Profile"
+            app:summary="View/Update your profile and targets"/>
+
+        <Preference
+            app:key="links"
+            app:title="Manage Links"
+            app:summary="View and Manage the therapist(s) you are linked with"/>
+
+        <Preference
+            app:key="log_out"
+            app:title="Log Out" />
+
+        <Preference
+            app:key="delete_account"
+            app:title="Delete Account" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

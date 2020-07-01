@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.moodtracker.ui.home.newmood.NewMoodViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.home.newmood.NewMoodFragment">
+
+            <TextView
+                android:id="@+id/newMoodLogYourMoodText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/log_your_mood"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/newMoodDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:layout_marginStart="16dp"
+                android:dateText="@{viewModel.selectedDate}"
+                android:textSize="24sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newMoodLogYourMoodText" />
+
+            <Button
+                android:id="@+id/newMoodSetDateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="@{() -> viewModel.onPickDate()}"
+                android:text="@string/set_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newMoodLogYourMoodText" />
+
+            <TextView
+                android:id="@+id/newMoodHowAreYouText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/rate_your_mood"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newMoodSetDateButton"/>
+
+
+            <HorizontalScrollView
+                android:id="@+id/newMoodHorizontalScroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newMoodHowAreYouText">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkedButton="@+id/moodSelection5"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/moodSelection1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:button="@null"
+                        android:textSize="32sp"
+                        android:onClick="@{() -> viewModel.onMoodChanged(1)}"
+                        android:background="@drawable/rb_custom_style"
+                        android:gravity="center_horizontal"
+                        android:text="@string/one" />
+
+                    <RadioButton
+                        android:id="@+id/moodSelection2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:button="@null"
+                        android:textSize="32sp"
+                        android:onClick="@{() -> viewModel.onMoodChanged(2)}"
+                        android:background="@drawable/rb_custom_style"
+                        android:gravity="center_horizontal"
+                        android:text="@string/two" />
+
+                    <RadioButton
+                        android:id="@+id/moodSelection3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:button="@null"
+                        android:textSize="32sp"
+                        android:onClick="@{() -> viewModel.onMoodChanged(3)}"
+                        android:background="@drawable/rb_custom_style"
+                        android:gravity="center_horizontal"
+                        android:text="@string/three" />
+
+                    <RadioButton
+                        android:id="@+id/moodSelection4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:button="@null"
+                        android:textSize="32sp"
+                        android:onClick="@{() -> viewModel.onMoodChanged(4)}"
+                        android:background="@drawable/rb_custom_style"
+                        android:gravity="center_horizontal"
+                        android:text="@string/four" />
+
+                    <RadioButton
+                        android:id="@+id/moodSelection5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:button="@null"
+                        android:textSize="32sp"
+                        android:onClick="@{() -> viewModel.onMoodChanged(5)}"
+                        android:background="@drawable/rb_custom_style"
+                        android:gravity="center_horizontal"
+                        android:text="@string/five"/>
+
+                    <RadioButton
+                        android:id="@+id/moodSelection6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:button="@null"
+                        android:textSize="32sp"
+                        android:onClick="@{() -> viewModel.onMoodChanged(6)}"
+                        android:background="@drawable/rb_custom_style"
+                        android:gravity="center_horizontal"
+                        android:text="@string/six" />
+
+                    <RadioButton
+                        android:id="@+id/moodSelection7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:button="@null"
+                        android:textSize="32sp"
+                        android:onClick="@{() -> viewModel.onMoodChanged(7)}"
+                        android:background="@drawable/rb_custom_style"
+                        android:gravity="center_horizontal"
+                        android:text="@string/seven" />
+
+                    <RadioButton
+                        android:id="@+id/moodSelection8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:button="@null"
+                        android:textSize="32sp"
+                        android:onClick="@{() -> viewModel.onMoodChanged(8)}"
+                        android:background="@drawable/rb_custom_style"
+                        android:gravity="center_horizontal"
+                        android:text="@string/eight" />
+
+                    <RadioButton
+                        android:id="@+id/moodSelection9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:button="@null"
+                        android:textSize="32sp"
+                        android:onClick="@{() -> viewModel.onMoodChanged(9)}"
+                        android:background="@drawable/rb_custom_style"
+                        android:gravity="center_horizontal"
+                        android:text="@string/nine" />
+
+                    <RadioButton
+                        android:id="@+id/moodSelection10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:button="@null"
+                        android:textSize="32sp"
+                        android:onClick="@{() -> viewModel.onMoodChanged(10)}"
+                        android:background="@drawable/rb_custom_style"
+                        android:gravity="center_horizontal"
+                        android:text="@string/ten" />
+                </RadioGroup>
+
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/newMoodCommentsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/any_comments"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newMoodHorizontalScroll" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/newMoodCommentsEditTextLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="250"
+                app:layout_constraintTop_toBottomOf="@+id/newMoodCommentsText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/newMoodCommentsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="6"
+                    android:maxLength="250"
+                    android:scrollbars="vertical"
+                    android:inputType="textMultiLine"
+                    android:gravity="top|start"
+                    android:text="@={viewModel.commentText}" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Switch
+                android:id="@+id/newMoodPrivateSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/is_private"
+                android:onCheckedChanged="@{(switch, checked) -> viewModel.onTogglePrivate(checked)}"
+                app:layout_constraintTop_toBottomOf="@id/newMoodCommentsEditTextLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/newMoodPrivateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:text="@string/private_explanation"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/newMoodPrivateSwitch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="96dp"
+                android:onClick="@{() -> viewModel.onSubmit()}"
+                android:text="@string/submit"
+                android:enabled="@{viewModel.canSubmit}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/newMoodPrivateText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</layout>

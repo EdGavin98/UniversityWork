@@ -1,0 +1,45 @@
+<div *ngIf="loading">
+    <p>.....Loading patient data</p>
+</div>
+<div class="detailsArea" *ngIf="!loading">
+    <mat-card class="patientSummary">
+      <mat-card-title>
+          Patient Details
+      </mat-card-title>
+      <mat-card-content>
+        <br><br>
+        <h1>Name: {{currentPatient.forename + " " + currentPatient.surname}}</h1>
+        <h3>Email : {{currentPatient.email}}</h3>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="patientMiniStats">
+      <mat-card-title>Quick Statistics</mat-card-title>
+      <mat-card-content>
+        <p>Total worries logged: {{currentPatient.worries.length}}</p>
+        <p>Average worry severity: {{currentPatient.getWorryAverage() | number: '1.2-2'}} ({{currentPatient.getWorryAverageThisMonth() | number: '1.2-2'}} This Month)</p>
+        <p>Total moods logged: {{currentPatient.moods.length}}</p>
+        <p>Average mood rating: {{currentPatient.getMoodAverage() | number: '1.2-2'}} ({{currentPatient.getMoodAverageThisMonth() | number: '1.2-2'}} This Month)</p>
+        <p>Mood target: Above {{currentPatient.moodTarget}} - Currently achieved: {{currentPatient.getMoodAverageThisMonth() > currentPatient.moodTarget ? "Yes" : "No" }}</p>
+        <p>Worry target: Below {{currentPatient.worryTarget}} - Currently achieved: {{currentPatient.getWorryAverageThisMonth() > currentPatient.worryTarget ? "No" : "Yes" }}</p>
+      </mat-card-content>
+    </mat-card>
+    <div class="patientDetailsArea">
+        <nav mat-tab-nav-bar>
+            <a mat-tab-link
+              [routerLink]='statsPath'
+              routerLinkActive #rlOne="routerLinkActive"
+              [routerLinkActiveOptions]="{exact:true}"
+              [active]=rlOne.isActive>
+              Statistics
+            </a>
+            <a mat-tab-link
+              [routerLink]="detailsPath"
+              routerLinkActive #rlTwo="routerLinkActive"
+              [routerLinkActiveOptions]="{exact:true}"
+              [active]=rlTwo.isActive>
+              Details
+            </a>
+        </nav>
+      <router-outlet></router-outlet>
+    </div>
+</div>

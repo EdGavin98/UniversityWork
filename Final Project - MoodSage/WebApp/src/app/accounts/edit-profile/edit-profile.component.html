@@ -1,0 +1,25 @@
+<h2>Edit Your Profile</h2>
+<div class="editContainer">
+    <form (ngSubmit)="onSubmit()" [formGroup]="editForm"> 
+        <div class="formInput">
+            <mat-form-field>
+                <input matInput required name="forenameInput" type="text" placeholder="First name" formControlName="forename"/>
+            </mat-form-field>
+        </div>
+        <div class="formInput">
+            <mat-form-field>
+                <input matInput required  name="surnameInput" type="text" placeholder="Surname"  formControlName="surname"/>
+            </mat-form-field>
+        </div>
+        <div class="formInput">
+            <mat-form-field>
+                <input matInput required name="emailInput" type="email" placeholder="Email"  formControlName="email"/>
+            </mat-form-field>
+        </div>
+        <div class="formInput">
+            <button id="submit" mat-raised-button type="submit" [disabled]="editForm.invalid">Submit</button>
+        </div>
+    </form>
+
+    <button mat-stroked-button class="deleteButton" (click)="onDelete()">Delete Account</button>
+</div>

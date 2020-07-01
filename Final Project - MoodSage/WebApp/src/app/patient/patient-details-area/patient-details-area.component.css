@@ -1,0 +1,10 @@
+.detailsTab {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detailsSpace {
+  width: 40%;
+  margin: 2% 5%;
+}

@@ -1,0 +1,30 @@
+<table mat-table [dataSource]="tableData" matSort class="mat-elevation-z10" multiTemplateDataRows>
+
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+    <td mat-cell *matCellDef="let element">{{getDate(element.date)}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="rating">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Rating</th>
+    <td mat-cell *matCellDef="let element">{{element.rating}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="expandedDetail">
+    <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+      <div [@detailExpand]="element == expandedMood ? 'expanded' : 'collapsed'">
+        <div class="mood-description">
+          {{element.comment}}
+        </div>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let element; columns : displayedColumns"
+      class="mood-row"
+      [class.mood-expanded-row]="expandedMood === element"
+      (click)="expandedMood = expandedMood === element ? null : element"></tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="mood-detail-row"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[10, 25, 50]" class="mat-elevation-z10"></mat-paginator>

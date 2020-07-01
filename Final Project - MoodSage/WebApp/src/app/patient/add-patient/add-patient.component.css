@@ -1,0 +1,23 @@
+.addPatientArea {
+    width: 70%;
+    margin: 15%;
+    border: 1px solid black;
+}
+
+.title {
+    text-align: center;
+}
+
+button {
+    margin:  10% 30% 0% 30%;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.field {
+    padding-top: 10%;
+}

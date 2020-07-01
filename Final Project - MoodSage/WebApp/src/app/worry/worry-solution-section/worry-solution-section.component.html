@@ -1,0 +1,26 @@
+<h2 class="solutionTitle">Solutions</h2>
+<div class="buttonSpace">
+    <button 
+        mat-icon-button 
+        id="leftButton" 
+        [disabled]="currentIndex == 0" 
+        (click)="onLeftClicked()">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <button 
+        mat-icon-button 
+        id="rightButton" 
+        [disabled]="currentIndex >= solutions.length - 1" 
+        (click)="onRightClicked()">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+</div>
+<div class="solutionSpace" *ngIf="solutions.length > 0">
+    <h3>Description:</h3>
+    <p id="descriptionText">{{solutions[currentIndex].description}}</p>
+    <h3>Advantages:</h3>
+    <p id="advantagesText">{{solutions[currentIndex].advantages}}</p>
+    <h3>Disadvantages:</h3>
+    <p id="disadvantagesText">{{solutions[currentIndex].disadvantages}}</p>
+</div>
+<h4 *ngIf="solutions.length == 0">No solutions logged for this worry</h4>

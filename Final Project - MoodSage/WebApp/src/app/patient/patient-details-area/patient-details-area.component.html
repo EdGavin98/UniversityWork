@@ -1,0 +1,10 @@
+<div class="detailsTab">
+  <div class="detailsSpace moods">
+      <app-worry-table [worries]="patient.worries"></app-worry-table>
+      <app-worry-list  [worries]="patient.worries"></app-worry-list>
+  </div >
+  <div class="detailsSpace worries">
+    <app-mood-table [moods]="patient.moods"></app-mood-table>
+    <app-mood-list [moods]="patient.moods"></app-mood-list>
+  </div>
+</div>

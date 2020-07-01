@@ -1,0 +1,33 @@
+.detailsSpace {
+    padding: 3% 5%;
+    width: 500px;
+    max-width: 100%;
+}
+
+h2, h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.type {
+    text-align: start;
+}
+
+.severity {
+    text-align: end;
+}
+
+.space {
+    display: flex;
+    justify-content: space-between;
+}
+
+p {
+    text-align: center;
+}
+
+.numSolutions {
+    border-top: 1px solid black;
+    padding-top: 4%;
+    margin-bottom: 0%;
+}

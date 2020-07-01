@@ -1,0 +1,19 @@
+.patientCard {
+    width: 200px;
+    margin: 1%;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.viewPatients {
+    display: flex;
+    flex-direction: column;
+}
+
+.listArea {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,25 @@
+.patientSummary {
+    width: 55%;
+    height: 250px;
+    margin: 3%;
+    border: 1px solid black;
+}
+
+.detailsArea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 3% 10%;
+}
+
+.patientMiniStats {
+    width: 25%;
+    height: 250px;
+    margin: 3%;
+    border: 1px solid black;
+}
+
+.patientDetailsArea {
+    width: 100%;
+    margin: 3%;
+}
