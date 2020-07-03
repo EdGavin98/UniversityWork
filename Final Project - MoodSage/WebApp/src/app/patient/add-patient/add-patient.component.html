@@ -1,0 +1,12 @@
+
+<mat-card class="addPatientArea"> 
+    <mat-card-title class="title">Add a patient</mat-card-title>
+    <mat-card-content>
+        <form (submit)="onSubmit()">
+            <mat-form-field class="field">
+                <input matInput type="text" name="patientEmailInput" placeholder="Patient Email" [(ngModel)]="patientEmail">
+            </mat-form-field>
+            <button mat-raised-button type="submit">Submit</button>
+        </form>
+    </mat-card-content>
+</mat-card>

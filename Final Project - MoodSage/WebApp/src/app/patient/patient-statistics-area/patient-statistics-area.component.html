@@ -1,0 +1,7 @@
+<div class="gridContainer">
+    <app-worry-each-day-chart [worries]="patient.worries"></app-worry-each-day-chart>
+    <app-rating-by-day-chart [moods]="patient.moods" [worries]="patient.worries" class="dayBarChart"></app-rating-by-day-chart>
+    <app-rating-over-time-chart [moods]=patient.moods [worries]="patient.worries" [moodTarget]="patient.moodTarget" [worryTarget]="patient.worryTarget" class="overTimeLineChart"></app-rating-over-time-chart>
+    <app-worries-with-solutions-chart [worries]=patient.worries></app-worries-with-solutions-chart>
+    <app-worry-type-chart [worries]="patient.worries" class="worryChart"></app-worry-type-chart>
+</div>

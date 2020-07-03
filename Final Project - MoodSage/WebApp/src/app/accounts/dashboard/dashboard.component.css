@@ -1,0 +1,31 @@
+.dashContainer {
+    margin: 2% 15%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 400px auto;
+    grid-gap: 50px;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.title {
+    margin-bottom: 5%
+}
+
+.userSpace {
+    margin-top: 15%;
+    margin-right: 15%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.addSpace {
+    width: 100%;
+}
+
+.listSpace {
+    grid-column: 1 / span 2;
+}

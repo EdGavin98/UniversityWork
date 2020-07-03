@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+  margin-top: 3%;
+}
+
+tr.mood-detail-row {
+  height: 0;
+}
+
+tr.mood-row:not(.mood-expanded-row):hover {
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+tr.mood-row:not(.mood-expanded-row):active {
+  background: #efefef;
+}
+
+.mood-row td {
+  border-bottom-width: 0;
+}
+
+.mood-description {
+  padding: 20px;
+}

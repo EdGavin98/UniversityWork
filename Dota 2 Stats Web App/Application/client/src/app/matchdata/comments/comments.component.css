@@ -1,0 +1,15 @@
+.commentSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.comment {
+    padding-top: 2%;
+    width: 40%;
+    text-align: left;
+}
+

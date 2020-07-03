@@ -1,0 +1,21 @@
+.match {
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+h4 {
+    text-align: center;
+}
+.matchSpace { 
+    float: right;
+    width: 45%;
+}
+
+.match:hover {
+    background-color: #888888;
+    cursor: pointer;
+}
+
+span { 
+    padding: 1% 5%;
+}

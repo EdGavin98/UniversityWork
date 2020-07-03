@@ -1,0 +1,9 @@
+<ul>
+    <a routerLink="/dashboard"><li>MoodSage</li></a>
+    <div class="user">
+        <a id="profile" *ngIf="loggedIn" routerLink="/profile"><li>Edit Profile</li></a>
+        <a id="logout" *ngIf="loggedIn" routerLink="/"><li (click)="logOut()">Log out</li></a>
+        <a id="register" *ngIf="!loggedIn" routerLink="/register"><li>Register</li></a>
+        <a id="login" *ngIf="!loggedIn" routerLink="/login"><li >Log in</li></a>
+    </div>
+</ul>

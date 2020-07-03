@@ -1,0 +1,17 @@
+<div>
+    <p class="sortingSelector">Sorting:
+        <select (change)="onChange()" [(ngModel)]="selectedSort">
+            <option value="default">Default</option>
+            <option value="alphabetical">Alphabetical</option>
+            <option value="attribute">Attribute (Agi, Int, Str)</option>
+        </select>
+    </p>
+</div>
+<div class="container">
+    <div class="heroFace" *ngFor="let hero of displayHeroes; let i = index">
+        <div (click)="viewDetails(hero.id)" (mouseenter)="hoveredElement=i" (mouseleave)="hoveredElement=-1" [ngStyle]="hoveredElement === i ? getColour(hero.attribute) : {'background-color': '#CCCCCC'}">
+            <h3>{{hero.name}}</h3>
+            <img src="{{'http://api.opendota.com' + hero.picture}}" width="256" height="144">
+        </div>
+    </div>
+</div>

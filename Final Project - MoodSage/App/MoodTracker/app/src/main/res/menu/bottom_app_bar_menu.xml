@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/calendarFragment"
+        android:icon="@drawable/ic_event_black_24dp"
+        android:title="@string/calendar"
+        app:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/worryDiaryFragment"
+        android:icon="@drawable/ic_library_books_black_24dp"
+        android:title="@string/worries"
+        app:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_show_chart_black_24dp"
+        android:title="@string/dashboard"
+        app:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="@string/settings"
+        app:showAsAction="withText"/>
+
+</menu>

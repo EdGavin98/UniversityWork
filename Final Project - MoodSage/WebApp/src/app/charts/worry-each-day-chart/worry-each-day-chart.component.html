@@ -1,0 +1,18 @@
+<div>
+    <mat-card>
+        <mat-card-title>Number of worries per day over time</mat-card-title>
+        <mat-card-content>
+            <canvas baseChart 
+                [chartType]="chartType" 
+                [datasets]="datasets" 
+                [options]="options" ></canvas>
+        </mat-card-content>
+        <mat-card-actions>
+            <mat-slide-toggle class="toggle" [(ngModel)]="thisMonthOnly" (change)="onChanged()" >Last Month</mat-slide-toggle>
+            <mat-select [(value)]="chartType" class="select">
+                <mat-option value="bar">Bar</mat-option>
+                <mat-option value="line">Line</mat-option>
+            </mat-select>
+        </mat-card-actions>
+    </mat-card>
+</div>

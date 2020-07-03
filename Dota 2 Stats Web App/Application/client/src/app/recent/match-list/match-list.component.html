@@ -1,0 +1,13 @@
+<div class="component">
+    <div class="matchSpace"> 
+        <div class="match" *ngFor="let match of data" (click)=search(match.matchId)>
+            <h4>Match Id: {{match.matchId}}</h4>
+            <span>Date accessed: {{formattedDate(match.access)}}</span>
+        </div>
+    </div>
+    <div class="viewCounts">
+        <h3>Most viewed matches:</h3>
+        <p *ngFor="let count of views">{{count._id}}: {{count.count}} views</p>
+    </div>
+</div>
+

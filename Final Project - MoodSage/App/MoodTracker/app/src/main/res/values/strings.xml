@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">MoodTracker</string>
+
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password_confirm">Confirm password</string>
+    <string name="prompt_first_name">First name</string>
+    <string name="prompt_last_name">Last name</string>
+    <string name="prompt_email">Email</string>
+
+    <string name="sign_in_short">Sign in</string>
+    <string name="register_short">Register</string>
+    <string name="register_long">No account? Register now</string>
+    <string name="submit">Submit</string>
+
+    <string name="dashboard">Dashboard</string>
+    <string name="worries">Worries</string>
+    <string name="settings">Settings</string>
+    <string name="calendar">Mood Calendar</string>
+
+    <string name="set_date">Set date</string>
+    <string name="rate_your_mood">Please rate your mood: </string>
+    <string name="any_comments">Any comments?</string>
+    <string name="log_your_mood">Log Your Mood</string>
+
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="ten">10</string>
+
+    <string name="rating_with_number">Rating: %d</string>
+    <string name="manage_links">Manage links</string>
+
+    <string name="accept">Accept</string>
+    <string name="deny">Remove</string>
+    <string name="link_name">%s %s</string>
+    <string name="logout">Log Out</string>
+
+    <string name="dashboard_title">Hello %s!</string>
+    <string name="dashboard_subtitle">Lets see how you\'re doing today</string>
+
+    <string name="log_thought">Log a Worry</string>
+    <string name="hypothetical">Hypothetical</string>
+    <string name="current">Current</string>
+    <string name="worry_type">Current Or Hypothetical?</string>
+    <string name="severity">Severity</string>
+    <string name="diary_severity">Severity: %d</string>
+    <string name="details">Details</string>
+    <string name="diary">Worry Diary</string>
+    <string name="date">Date</string>
+    <string name="type">Type</string>
+    <string name="colored_bar_reflecting_mood_severity">Colored bar reflecting mood severity</string>
+    <string name="manage_your_links">Manage Your Links</string>
+    <string name="current_hypothetical_explanation" formatted="false">
+        What are current and hypothetical worries?\n\n
+
+        A current worry is about something that is going to happen that you could possibly do something about, such as an upcoming appointment, or a presentation that you need to give.\n\n
+        A hypothetical worry is about something that might happen that you usually can\'t do anything about, like worrying about a bus or train breaking down, or something happening to you when you go out.\n
+    </string>
+    <string name="average_rating_chart_title">Average Mood Rating and Worry Severity By Day</string>
+    <string name="rating_over_time_chart_title">Mood Rating and Worry Severity Over Time</string>
+    <string name="current_hypothetical_split">Worries split by type</string>
+
+    <string name="loading_data">Loading your data…</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="profile">My Profile</string>
+    <string name="submit_changes">Submit Changes</string>
+    <string name="internet_required_profile">An internet connection is required to edit your details</string>
+    <string name="is_private">Private?</string>
+    <string name="private_explanation">Selecting private will block your therapist from being able to view this.\n(Only applies to linked accounts)</string>
+    <string name="update_targets">Update Your Targets</string>
+    <string name="mood">Mood</string>
+    <string name="worry">Worry</string>
+    <string name="update_details">Update Your Details</string>
+    <string name="mood_target_description">Your average mood rating over the last 30 days is %0$.2f and your current target is to get it above %d.\n\n%s</string>
+    <string name="worry_target_description">Your average worry severity over the last 30 days is %0$.2f and your current target is to bet it below %d.\n\n%s</string>
+    <string name="set_your_worries">It looks like you don\'t have any targets set, why don\'t you head over to your profile and go set some!</string>
+
+    <string name="notification_title">MoodSage Daily Reminder</string>
+    <string name="notification_body">It looks like you haven\'t logged any moods yet. Click this notification to do it now!</string>
+
+    <string name="solutions">Solutions</string>
+    <string name="add_solution">Add Solution</string>
+    <string name="description">Description</string>
+    <string name="advantages">Advantages</string>
+    <string name="disadvantages">Disadvantages</string>
+    <string name="date_logged">Date Logged</string>
+    <string name="swipe_to_view">Swipe to view more</string>
+    <string name="add_a_solution">Add a Solution</string>
+    <string name="worries_with_solution">Amount of Worries With Solutions</string>
+    <string name="loading_dash">Loading Dashboard</string>
+
+    <string name="month_average">Month Average: %0$.2f</string>
+    <string name="max_severity">Max Severity</string>
+    <string name="min_severity">Min Severity</string>
+    <string name="password_rules">Password Must Contain:\n8 characters or more\n1 uppercase character\n1 lowercase character\n1 number</string>
+
+</resources>

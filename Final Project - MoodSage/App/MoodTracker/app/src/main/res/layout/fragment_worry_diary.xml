@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.moodtracker.ui.home.worries.WorryDiaryViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.home.worries.WorryDiaryFragment">
+
+        <TextView
+            android:id="@+id/diaryTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/diary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <TextView
+            android:id="@+id/diaryTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/type"
+            app:layout_constraintTop_toBottomOf="@id/diaryTitleTextView"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/diarySeverityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/min_severity"
+            app:layout_constraintTop_toBottomOf="@id/diaryTitleTextView"
+            app:layout_constraintStart_toEndOf="@id/diaryTypeTextView"
+            app:layout_constraintEnd_toStartOf="@id/diaryMaxSeverityTextView"/>
+
+        <TextView
+            android:id="@+id/diaryMaxSeverityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/max_severity"
+            app:layout_constraintTop_toBottomOf="@id/diaryTitleTextView"
+            app:layout_constraintStart_toEndOf="@id/diarySeverityTextView"
+            app:layout_constraintEnd_toStartOf="@id/diaryDateTextView"/>
+
+        <TextView
+            android:id="@+id/diaryDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/date"
+            app:layout_constraintTop_toBottomOf="@id/diaryTitleTextView"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Spinner
+            android:id="@+id/diaryTypeSpinner"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/worry_types_array"
+            app:selectedFilterValue="@={viewModel.filter.type}"
+            app:layout_constraintTop_toBottomOf="@id/diaryTypeTextView"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Spinner
+            android:id="@+id/diarySeveritySpinner"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:entries="@array/one_to_ten"
+            app:selectedFilterValue="@={viewModel.filter.severity}"
+            app:layout_constraintTop_toBottomOf="@id/diarySeverityTextView"
+            app:layout_constraintStart_toEndOf="@id/diaryTypeSpinner"
+            app:layout_constraintEnd_toStartOf="@id/diaryMaxSeveritySpinner"/>
+
+        <Spinner
+            android:id="@+id/diaryMaxSeveritySpinner"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:entries="@array/one_to_ten"
+            app:selectedFilterValue="@={viewModel.filter.maxSeverity}"
+            app:layout_constraintTop_toBottomOf="@id/diarySeverityTextView"
+            app:layout_constraintStart_toEndOf="@id/diarySeveritySpinner"
+            app:layout_constraintEnd_toStartOf="@id/diaryDateSpinner"/>
+
+        <Spinner
+            android:id="@+id/diaryDateSpinner"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/date_length_array"
+            app:selectedFilterValue="@={viewModel.filter.date}"
+            app:layout_constraintTop_toBottomOf="@id/diaryDateTextView"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/diaryRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:list="@{viewModel.allWorries}"
+            app:layout_constraintTop_toBottomOf="@id/diarySeveritySpinner"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

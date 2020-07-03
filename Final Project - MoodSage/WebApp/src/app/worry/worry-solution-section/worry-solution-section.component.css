@@ -1,0 +1,18 @@
+.solutionSpace {
+    padding: 2% 5%;
+    white-space: pre-wrap;
+}
+
+.solutionTitle {
+    margin-top: 4%;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+.buttonSpace {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

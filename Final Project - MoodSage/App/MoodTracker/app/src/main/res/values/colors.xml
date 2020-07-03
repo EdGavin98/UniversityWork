@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF6A1B9A</color>
+    <color name="colorPrimaryDark">#FF4527A0</color>
+    <color name="colorAccent">#FFD81B60</color>
+    <color name="colorPrimaryLight">#FFAD1457</color>
+
+
+    <!-- Colours for calendar -->
+    <color name="red">#FFFF0000</color>
+    <color name="green">#FF00FF00</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="cyan">#FF00FFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="yellow">#FFFFFF00</color>
+</resources>

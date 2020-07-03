@@ -1,0 +1,11 @@
+<div>
+    <div class="dataContainer" *ngIf="!loading">
+        <h2>{{heroData.name}}</h2>
+        <img src="{{'http://api.opendota.com' + heroData.picture}}" height="144" width="256">
+        <h4>{{heroData.attribute}}    |    {{heroData.attackType}}    |    {{heroData.legs}} Legs</h4>
+        <span *ngFor="let role of heroData.roles">{{role}}</span>
+    </div>
+    <app-matchups [matchups]="matchups" *ngIf="!matchupLoading"></app-matchups>
+    <app-winrates [data]="winrates" *ngIf=!winrateLoading></app-winrates>
+    <app-recent-matches *ngIf=!loading></app-recent-matches>
+</div>

@@ -1,0 +1,39 @@
+<div>
+    <table>
+        <tr>
+            <th>Player</th>
+            <th>Hero</th>
+            <th>K/D/A</th>
+            <th>Last hits</th>
+            <th>Denies</th>
+            <th>GPM</th>
+            <th>XPM</th>
+            <th>Items</th>
+        </tr>
+        <tr class="row" *ngFor="let player of teamdata.players">
+            <td>{{player.username}}</td >
+            <td><img src="{{'http://api.opendota.com' + player.hero.picture}}"/>  {{player.hero.name}}</td>
+            <td>{{player.kda}}</td>
+            <td>{{player.lasthits}}</td>
+            <td>{{player.denies}}</td>
+            <td>{{player.gpm}}</td>
+            <td>{{player.xpm}}</td>
+            <td>
+                <span *ngFor="let item of player.items" class="tooltip">
+                    <img src="{{'http://api.opendota.com' + item.picture}}" height="27px">
+                    <span class="tooltiptext">{{item.name}}</span>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>Total: </td>
+            <td></td>
+            <td>{{teamdata.totalkda}}</td>
+            <td>{{teamdata.lasthits}}</td>
+            <td>{{teamdata.denies}}</td>
+            <td>{{teamdata.totalgpm}}</td>
+            <td>{{teamdata.totalxpm}}</td>
+            <td></td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,9 @@
+<div class="matchSpace"> 
+    <h4>Recent Matches:</h4>
+    <div class="match" *ngFor="let match of recentMatches" (click)=search(match.id)>
+        <h5>Match Id: {{match.id}}</h5>
+        <span>Duration: {{match.length}}</span>
+        <span>{{match.victory ? "Victory" : "Defeat"}}</span>
+        <span>KDA: {{match.kda}}</span>
+    </div>
+</div>

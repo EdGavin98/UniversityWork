@@ -1,0 +1,12 @@
+<div>
+    <p *ngIf=loading>Loading.....</p>
+    <div *ngIf=!loading>
+        <app-scoreboard [matchdata]="data"></app-scoreboard>
+        <h3>Radiant</h3>
+        <app-teamdata [matchdata]="data" [teamdata]="data.radiant" ></app-teamdata>
+        <h3>Dire</h3>
+        <app-teamdata [matchdata]="data" [teamdata]="data.dire" ></app-teamdata>
+        <app-chart [gold]="data.goldAdvantage" [xp]="data.xpAdvantage" ></app-chart>
+        <app-comments [matchId]="id" ></app-comments>
+    </div>
+</div>

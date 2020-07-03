@@ -1,0 +1,23 @@
+
+<h1>Dashboard</h1>
+<div *ngIf="loading">
+    <p>...Loading</p>
+</div>
+<div class="dashContainer" *ngIf="!loading">
+    <mat-card class="userSpace">
+        <mat-card-title id="title">
+            Hello {{profile.forename + " " + profile.surname}}
+        </mat-card-title>
+        <mat-card-content>
+            <h3 id="email">Email: {{profile.email}}</h3>
+            <h3 id="total">Total Patients: {{linkCount}}</h3>
+        </mat-card-content>
+    </mat-card>
+    <div class="addSpace">
+        <app-add-patient></app-add-patient>
+    </div>
+    <div class="listSpace">
+        <app-patient-list></app-patient-list>
+    </div>
+</div>
+

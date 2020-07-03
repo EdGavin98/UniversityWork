@@ -1,0 +1,5 @@
+<div>
+    <input type="number" id="idSearch" [(ngModel)]="matchId" placeholder="Enter match ID here">
+    <button (click)="searchForMatch()">Search</button>
+    <p *ngIf="invalid">Match ID must contain numeric values only</p>
+</div>
